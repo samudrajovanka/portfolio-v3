@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    @apply font-consolas;
+  }
+
+  html {
+    @apply bg-white;
+  }
+
+  html.dark {
+    @apply bg-neutral-950;
+  }
+}
+
+@layer utilities {
+  .border-content {
+    @apply border-dashed border-slate-200 dark:border-gray-800;
+  }
+
+  .bg-subtitle {
+    @apply bg-slate-200 dark:bg-gray-800;
+  }
+
+  .text-subtitle {
+    @apply text-slate-500 dark:text-gray-400;
+  }
+
+  .bg-theme {
+    @apply bg-white dark:bg-neutral-950;
+  }
+}
