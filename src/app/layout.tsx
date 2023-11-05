@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={robotoMono.variable}>
+    <html lang="en" className={robotoMono.variable} suppressHydrationWarning>
       <body className="min-h-d-screen flex flex-col">
         <Providers>
           <header>

@@ -13,7 +13,6 @@ export type Typography =
   | 'subheading'
   | 'regular'
   | 'description';
-  
 
 type Color = 'subtitle' | 'normal';
 

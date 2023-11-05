@@ -38,6 +38,7 @@ const Text: React.FC<TextProps> = ({
   const fincalClassName = twMerge(
     getTypographyClassName(typography),
     getColorClassName(),
+    'w-fit',
     className
   );
 
