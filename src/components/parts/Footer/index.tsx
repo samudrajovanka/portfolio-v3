@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-subtitle border-content border-t-2 z-[2] bg-theme">
+    <footer className="text-subtitle border-content bg-theme z-[2] border-t-2">
       <Container className="flex flex-col items-center gap-2 p-3 md:flex-row md:justify-between">
         <div className="flex justify-center gap-6">
           <Logo size="sm" />

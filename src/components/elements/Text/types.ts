@@ -8,7 +8,7 @@ type TextComponent =
   | 'h5'
   | 'h6';
 
-type Typography =
+export type Typography =
   | 'heading'
   | 'subheading'
   | 'regular'

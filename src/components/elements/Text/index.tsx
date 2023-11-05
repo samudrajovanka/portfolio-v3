@@ -1,6 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
-import { TextProps } from './types';
+import { TextProps, Typography } from './types';
 
 const Text: React.FC<TextProps> = ({
   as: Component = 'p',
@@ -11,10 +11,10 @@ const Text: React.FC<TextProps> = ({
   resetTypography,
   resetColor
 }) => {
-  const getTypographyClassName = (typography: string): string => {
+  const getTypographyClassName = (typography: Typography): string => {
     if (resetTypography) return '';
 
-    const typographyClassName = {
+    const typographyClassName: Record<Typography, string> = {
       heading: 'text-3xl sm:text-4xl font-bold',
       subheading: 'text-xl sm:text-2xl font-bold',
       regular: 'text-sm sm:text-base',

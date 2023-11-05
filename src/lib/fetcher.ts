@@ -16,7 +16,7 @@ const generateQuery = (query: Query) => {
   return queryString;
 };
 
-const parseURL = (url: string, query: Query) => {
+const parseURL = (url: string, query?: Query) => {
   const [urlWithoutQueries, initialQueries] = url.split('?');
 
   const listOfQueries: string[] = [];

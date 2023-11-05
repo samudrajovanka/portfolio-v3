@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+import { RedirectType, notFound, redirect } from 'next/navigation';
 
 import { getResume } from '@/repositories/resume';
 
@@ -10,7 +10,7 @@ const ResumePage = async () => {
     notFound();
   }
 
-  redirect(resume.url, 'push');
+  redirect(resume.url, RedirectType.push);
 };
 
 export default ResumePage;

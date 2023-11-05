@@ -1,5 +1,3 @@
-import type { Metadata } from 'next';
-
 import Footer from '@/components/parts/Footer';
 import Navbar from '@/components/parts/Navbar';
 import Providers from '@/components/parts/Providers';
@@ -7,7 +5,7 @@ import generateMetadata from '@/lib/metadata';
 
 import '@/assets/styles/globals.css';
 
-export const metadata: Metadata = generateMetadata();
+export const metadata = generateMetadata();
 
 export default function RootLayout({
   children
