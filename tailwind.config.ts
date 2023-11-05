@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        consolas: ['consolas', 'monospace']
+        consolas: ['var(--font-roboto-mono)', 'consolas', 'monospace']
       },
       colors: {
         primary: {

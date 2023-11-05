@@ -8,8 +8,8 @@ import { ThemeButtonProps } from './types';
 
 const ICON_CLASSNAME = {
   light: `scale-50 group-hover/theme::translate-y-[300%] translate-y-[300%]
-    dark:translate-y-1/2 group-hover/theme:dark:translate-y-[130%] dark:scale-100`,
-  dark: `translate-y-1/2 group-hover/theme:translate-y-[130%]
+    dark:translate-y-1/2 group-hover/theme:dark:md:translate-y-[130%] dark:scale-100`,
+  dark: `translate-y-1/2 group-hover/theme:md:translate-y-[130%]
     dark:translate-y-[300%] group-hover/theme:dark:translate-y-[300%] dark:scale-50`
 };
 
@@ -28,7 +28,8 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ className }) => {
       type="button"
       className={twMerge(
         'p-5 relative grid place-content-center relative overflow-hidden group/theme',
-        'border-b border-b-transparent hover:border-b-gray-300 dark:hover:border-b-white transition-color duration-500',
+        'border-b border-b-transparent hover:md:border-b-gray-300 dark:hover:md:border-b-white',
+        'transition-color duration-500',
         className
       )}
       role="switch"

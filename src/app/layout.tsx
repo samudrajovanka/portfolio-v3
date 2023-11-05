@@ -1,3 +1,4 @@
+import { robotoMono } from '@/assets/fonts';
 import Footer from '@/components/parts/Footer';
 import Navbar from '@/components/parts/Navbar';
 import Providers from '@/components/parts/Providers';
@@ -13,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="flex min-h-screen flex-col">
+    <html lang="en" className={robotoMono.variable}>
+      <body className="min-h-d-screen flex flex-col">
         <Providers>
           <header>
             <Navbar />

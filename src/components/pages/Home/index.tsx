@@ -4,19 +4,22 @@ import Text from '@/components/elements/Text';
 
 const Home = () => {
   return (
-    <Container className="absolute left-1/2 top-0 flex h-screen -translate-x-1/2 flex-col justify-center">
+    <Container className="h-d-screen absolute left-1/2 top-0 flex -translate-x-1/2 flex-col justify-center">
       <div className="md:w-3/4">
         <Text as="h1" resetTypography className="text-3xl font-bold sm:text-6xl">
-          Hello, I&apos;m Jovanka
+          Hello,
+        </Text>
+
+        <Text resetTypography className="text-3xl font-bold sm:text-6xl">
+          I&apos;m Jovanka
           <Text as="span" resetTypography resetColor className="text-primary-main dark:text-secondary-main">
             .
           </Text>
         </Text>
 
         <Text resetTypography className="my-5 text-base sm:text-lg">
-          I am experienced{' '}
           <strong
-            className="bg-neutral-950 text-white dark:bg-white dark:text-neutral-950"
+            className="bg-neutral-950 px-1 text-white dark:bg-white dark:text-neutral-950"
           >
             Fullstack Web Developer
           </strong>{' '}
