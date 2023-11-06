@@ -28,7 +28,7 @@ const Text: React.FC<TextProps> = ({
     if (resetColor) return '';
 
     const colorClassName = {
-      normal: 'text-neutral-950 dark:text-white',
+      normal: 'text-theme-dark dark:text-theme-light',
       subtitle: 'text-subtitle'
     };
 

@@ -1,21 +1,21 @@
 import Container from '@/components/elements/Container';
 import Link from '@/components/elements/Link';
 import Logo from '@/components/parts/Logo';
+import Navigation from '@/components/parts/Navigation';
 import ThemeButton from '@/components/parts/ThemeButton';
 
 const Navbar = () => {
   return (
-    <nav className="border-content bg-theme sticky top-0 z-[999] border-b-2">
-      <Container className="flex items-center justify-between p-3">
+    <div className="border-content bg-theme sticky top-0 z-navbar border-b-2">
+      <Container className="flex items-center gap-6 p-3">
         <Link href="/" title="home">
           <Logo />
         </Link>
 
-        <div>
-          <ThemeButton />
-        </div>
+        <ThemeButton className="ml-auto" />
+        <Navigation />
       </Container>
-    </nav>
+    </div>
   );
 };
 

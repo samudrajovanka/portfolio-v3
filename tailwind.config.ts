@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: [
@@ -18,6 +19,10 @@ const config: Config = {
         },
         secondary: {
           main: '#FFCB30'
+        },
+        theme: {
+          light: colors.white,
+          dark: colors.neutral[950]
         }
       },
       transitionTimingFunction: {
@@ -27,6 +32,11 @@ const config: Config = {
       },
       backgroundImage: {
         'rect-pattern': 'url("/images/rect-pattern.png")'
+      },
+      zIndex: {
+        navbar: '999',
+        'navbar-hamburger': '1001',
+        'navbar-navigation': '1000'
       }
     }
   },

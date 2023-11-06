@@ -8,11 +8,11 @@
   }
 
   html {
-    @apply bg-white;
+    @apply bg-theme-light;
   }
 
   html.dark {
-    @apply bg-neutral-950;
+    @apply bg-theme-dark;
   }
 }
 
@@ -30,7 +30,7 @@
   }
 
   .bg-theme {
-    @apply bg-white dark:bg-neutral-950;
+    @apply bg-theme-light dark:bg-theme-dark;
   }
 
   .min-h-d-screen {
