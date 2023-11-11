@@ -17,9 +17,7 @@ export default function RootLayout({
     <html lang="en" className={robotoMono.variable} suppressHydrationWarning>
       <body className="min-h-d-screen flex flex-col">
         <Providers>
-          <header>
-            <Navbar />
-          </header>
+          <Navbar />
 
           <main className="flex-1 bg-rect-pattern">
             {children}

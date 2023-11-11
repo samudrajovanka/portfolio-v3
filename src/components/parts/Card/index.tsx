@@ -8,7 +8,7 @@ const Card: React.FC<CardProps> = ({
   className,
   ...props
 }) => {
-  const bgClassName = 'bg-theme-light dark:bg-theme-dark';
+  const bgClassName = 'bg-theme';
   const borderClassName = 'border-[2px] border-content';
   const transitionClassName = 'transition-transform duration-500';
 
