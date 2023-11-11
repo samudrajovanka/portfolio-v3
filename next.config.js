@@ -11,6 +11,9 @@ const getHost = () => {
 const nextConfig = {
   env: {
     APP_URL: getHost()
+  },
+  images: {
+    domains: ['media.discordapp.net']
   }
 };
 

@@ -1,5 +1,6 @@
 import { twMerge } from 'tailwind-merge';
 
+import Link from '@/components/elements/Link';
 import { getSocialMedias } from '@/repositories/socialMedia';
 
 import { SOCIAL_MEDIA_ICONS } from './data';
@@ -18,18 +19,16 @@ const SocialMediaIconList = async () => {
         }
 
         return (
-          <a
+          <Link
             key={socialMedia._id}
             href={socialMedia.url}
-            target="_blank"
-            rel="noopener noreferrer"
+            isExternal
             title={`${socialMedia.key.toLowerCase()} profile`}
-            className="group/icon relative"
           >
             <data.icon
               className={twMerge('text-xl text-subtitle transition-color', data.colorClassName)}
             />
-          </a>
+          </Link>
         );
       })}
     </div>

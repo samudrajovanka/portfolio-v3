@@ -3,7 +3,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { twMerge } from 'tailwind-merge';
 
-import { HamburgerButtonProps } from './types';
+import type { HamburgerButtonProps } from './types';
 
 const HamburgerButton: React.FC<HamburgerButtonProps> = ({
   title = 'hamburger button',
@@ -30,7 +30,7 @@ const HamburgerButton: React.FC<HamburgerButtonProps> = ({
       display: 'none'
     },
     close: {
-      width: '100%',
+      width: '75%',
       display: 'block'
     }
   };

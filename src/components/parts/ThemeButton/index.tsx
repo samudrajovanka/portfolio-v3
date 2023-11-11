@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 import { BsFillSunFill as SunIcon, BsFillMoonFill as MoonIcon } from 'react-icons/bs';
 import { twMerge } from 'tailwind-merge';
 
-import { ThemeButtonProps } from './types';
+import type { ThemeButtonProps } from './types';
 
 const ICON_CLASSNAME = {
   light: `scale-50 group-hover/theme::translate-y-[300%] translate-y-[300%]

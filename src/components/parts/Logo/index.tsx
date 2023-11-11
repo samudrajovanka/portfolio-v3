@@ -1,7 +1,7 @@
 import Image from '@/components/parts/Image';
 import logoImage from '@/public/images/logo.png';
 
-import { LogoProps, LogoSize } from './types';
+import type { LogoProps, LogoSize } from './types';
 
 const logoSize: Record<LogoSize, number> = {
   'sm': 24,

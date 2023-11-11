@@ -13,6 +13,7 @@ import { NAVIGATION_MENU } from './data';
 const Navigation = () => {
   const [isOpenNav, setIsOpenNav] = useState(false);
 
+  // ! make close when success navigation
   const toggleOpenNav = () => {
     setIsOpenNav((prev) => !prev);
   };
@@ -47,9 +48,9 @@ const Navigation = () => {
         }}
       >
         {NAVIGATION_MENU.map((item) => (
-          <Reveal key={item.href}>
+          <Reveal key={item.href} repeat>
             <Link
-              href="/"
+              href={item.href}
               className="text-2xl after:h-[4px] sm:text-3xl"
               onClick={toggleOpenNav}
             >
