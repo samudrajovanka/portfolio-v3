@@ -7,7 +7,7 @@ import type { FadeProps } from './types';
 const Fade: React.FC<FadeProps> = ({ children, className, ...props }) => {
   const animateVariant: Variants = {
     from: {
-      transform: 'translateY(10rem)',
+      transform: 'translateY(5rem)',
       opacity: 0
     },
     to: {
