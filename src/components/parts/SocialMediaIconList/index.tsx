@@ -24,6 +24,7 @@ const SocialMediaIconList = async () => {
             href={socialMedia.url}
             isExternal
             title={`${socialMedia.key.toLowerCase()} profile`}
+            className="group/icon"
           >
             <data.icon
               className={twMerge('text-xl text-subtitle transition-color', data.colorClassName)}
