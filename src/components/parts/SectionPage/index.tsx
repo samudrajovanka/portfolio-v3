@@ -17,9 +17,13 @@ const SectionPage: React.FC<SectionPageProps> = ({
     <>
       {props.header ? props.header : null}
 
-      <div className="mt-10">
-        {children}
-      </div>
+      {props.header ? (
+        <div className="mt-10">
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </>
   );
 

@@ -14,5 +14,5 @@ export type ListProps = React.PropsWithChildren<{
   /**
    * @default flex
    */
-  display?: 'flex' | 'grid';
+  display?: 'flex' | 'grid' | 'block';
 }>;

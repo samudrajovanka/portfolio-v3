@@ -1,7 +1,7 @@
 import Fade from '@/components/elements/Fade';
+import List from '@/components/elements/List';
 import BlogCard from '@/components/parts/BlogCard';
 import HeaderSection from '@/components/parts/HeaderSection';
-import List from '@/components/parts/List';
 import SectionPage from '@/components/parts/SectionPage';
 import { getMediumBlogs } from '@/repositories/mediumBlog';
 

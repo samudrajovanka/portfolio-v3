@@ -1,10 +1,10 @@
 import moment from 'moment';
 
+import Card from '@/components/elements/Card';
 import Link from '@/components/elements/Link';
+import List from '@/components/elements/List';
 import Reveal from '@/components/elements/Reveal';
 import Text from '@/components/elements/Text';
-import Card from '@/components/parts/Card';
-import List from '@/components/parts/List';
 import Tag from '@/components/parts/Tag';
 
 import type { BlogCardProps } from './types';

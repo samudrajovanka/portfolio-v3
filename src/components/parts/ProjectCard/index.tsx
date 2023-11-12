@@ -1,11 +1,11 @@
 import { FaCode, FaLink } from 'react-icons/fa';
 
+import Card from '@/components/elements/Card';
 import Link from '@/components/elements/Link';
+import List from '@/components/elements/List';
 import Reveal from '@/components/elements/Reveal';
 import Text from '@/components/elements/Text';
-import Card from '@/components/parts/Card';
 import Image from '@/components/parts/Image';
-import List from '@/components/parts/List';
 import Tag from '@/components/parts/Tag';
 
 import type { ProjectCardProps } from './types';
@@ -34,8 +34,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
         <Reveal className="mt-4">
           <List as="ul" direction="horizontal" className="flex-wrap gap-2">
-            {project.stacks.map((stack) => (
-              <li key={stack}>
+            {project.stacks.map((stack, idx) => (
+              <li key={`${stack}_${idx}`}>
                 <Tag>{stack}</Tag>
               </li>
             ))}

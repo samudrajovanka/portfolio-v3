@@ -1,6 +1,6 @@
 import Container from '@/components/elements/Container';
 import Link from '@/components/elements/Link';
-import Logo from '@/components/parts/Logo';
+import Logo from '@/components/elements/Logo';
 import Navigation from '@/components/parts/Navigation';
 import ThemeButton from '@/components/parts/ThemeButton';
 

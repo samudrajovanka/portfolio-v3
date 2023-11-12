@@ -1,7 +1,7 @@
 import Container from '@/components/elements/Container';
+import Logo from '@/components/elements/Logo';
 import Reveal from '@/components/elements/Reveal';
 import Text from '@/components/elements/Text';
-import Logo from '@/components/parts/Logo';
 import SocialMediaIconList from '@/components/parts/SocialMediaIconList';
 
 const Footer = () => {

@@ -19,7 +19,8 @@ const List: React.FC<ListProps> = ({ children, as: Component = 'div', display = 
   const getDisplayClassName = (): string => {
     const displayClassName = {
       grid: 'grid grid-flow-row',
-      flex: 'flex'
+      flex: 'flex',
+      block: 'block'
     };
 
     return displayClassName[display] ?? displayClassName.flex;
@@ -28,7 +29,7 @@ const List: React.FC<ListProps> = ({ children, as: Component = 'div', display = 
   return (
     <Component
       className={twMerge(
-        'gap-5',
+        ['grid', 'flex'].includes(display) ? 'gap-5' : undefined,
         getDisplayClassName(),
         getDirectionClassName(),
         props.className

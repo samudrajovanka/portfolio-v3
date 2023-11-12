@@ -1,6 +1,6 @@
 import Fade from '@/components/elements/Fade';
+import List from '@/components/elements/List';
 import HeaderSection from '@/components/parts/HeaderSection';
-import List from '@/components/parts/List';
 import ProjectCard from '@/components/parts/ProjectCard';
 import SectionPage from '@/components/parts/SectionPage';
 import { getProjects } from '@/repositories/projects';
