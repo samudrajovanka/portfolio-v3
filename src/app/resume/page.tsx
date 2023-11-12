@@ -10,7 +10,7 @@ const ResumePage = async () => {
     notFound();
   }
 
-  redirect(resume.url, RedirectType.push);
+  redirect(resume.url, RedirectType.replace);
 };
 
 export default ResumePage;
