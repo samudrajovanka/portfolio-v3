@@ -1,4 +1,4 @@
-import Image from '@/components/parts/Image';
+import Image from '@/components/elements/Image';
 import logoImage from '@/public/images/logo.png';
 
 import type { LogoProps, LogoSize } from './types';
@@ -10,7 +10,8 @@ const logoSize: Record<LogoSize, number> = {
 };
 
 const Logo: React.FC<LogoProps> = ({
-  size = 'md'
+  size = 'md',
+  ...props
 }) => {
   const logoSizeValue = logoSize[size];
 
@@ -21,6 +22,7 @@ const Logo: React.FC<LogoProps> = ({
       height={logoSizeValue}
       width={logoSizeValue}
       className="dark:brightness-0 dark:invert"
+      {...props}
     />
   );
 };

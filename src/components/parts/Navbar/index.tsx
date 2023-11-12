@@ -9,7 +9,7 @@ const Navbar = () => {
     <div className="border-content bg-theme sticky top-0 z-navbar border-b-2">
       <Container className="flex items-center gap-6 p-3">
         <Link href="/" title="home">
-          <Logo />
+          <Logo priority />
         </Link>
 
         <ThemeButton className="ml-auto" />
