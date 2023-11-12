@@ -26,7 +26,7 @@ const LetsConnect = async () => {
           <List as="ul" display="block" className="list-margin list-disc">
             {socialMedias.map((socialMedia) => (
               <li key={socialMedia._id}>
-                <Link href={socialMedia.url}>{upperFirstLetter(socialMedia.key)}</Link>
+                <Link href={socialMedia.url} typography="regular">{upperFirstLetter(socialMedia.key)}</Link>
               </li>
             ))}
           </List>
