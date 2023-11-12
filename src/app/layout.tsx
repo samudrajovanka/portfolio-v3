@@ -4,6 +4,7 @@ import Navbar from '@/components/parts/Navbar';
 import Providers from '@/components/parts/Providers';
 import generateMetadata from '@/lib/metadata';
 
+import 'nprogress/nprogress.css';
 import '@/assets/styles/globals.css';
 
 export const metadata = generateMetadata();

@@ -1,4 +1,7 @@
+'use client';
+
 import { default as NextLink } from 'next/link';
+import NProgress from 'nprogress';
 import { twMerge } from 'tailwind-merge';
 
 import { typographyClassName } from '@/components/elements/Text/data';
@@ -12,6 +15,7 @@ const Link: React.FC<LinkProps> = ({
   withColorNeutral,
   typography,
   isExternal,
+  onClick,
   ...linkProps
 }) => {
   const colorNeutralClassName = withColorNeutral ? 'text-theme-dark dark:text-theme-light' : '';
@@ -37,12 +41,24 @@ const Link: React.FC<LinkProps> = ({
 
   const finalClassName = twMerge(colorNeutralClassName, getTypographyClassName(), getTextClassName(), className);
 
+  const shouldEventStart = () => {
+    const currentPathname = window.location.pathname;
+    
+    if (linkProps.href === currentPathname) return false;
+    if (linkProps.target && linkProps.target !== '_self') return false;
+    if (linkProps.href?.startsWith('#')) return false;
+    if (!linkProps.href?.startsWith('/')) return false;
+
+    return true;
+  };
+
   if (isExternal) {
     return (
       <a
         className={finalClassName}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onClick}
         {...linkProps}
       >
         {children}
@@ -53,6 +69,13 @@ const Link: React.FC<LinkProps> = ({
   return (
     <NextLink
       className={finalClassName}
+      onClick={(e) => {
+        if (shouldEventStart()) {
+          NProgress.start();
+        }
+
+        onClick && onClick(e);
+      }}
       {...linkProps}
     >
       {children}
