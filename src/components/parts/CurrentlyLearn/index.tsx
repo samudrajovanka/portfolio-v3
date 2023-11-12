@@ -10,7 +10,7 @@ const CurrentlyLearn = async () => {
   return (
     <article>
       <Reveal>
-        <Text as="h1" typography="heading">What I currently learn</Text>
+        <Text as="h1" typography="subheading">What I currently learn</Text>
       </Reveal>
 
       <Reveal className="mt-3">

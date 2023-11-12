@@ -14,7 +14,7 @@ const LetsConnect = async () => {
   return (
     <article>
       <Reveal>
-        <Text as="h1" typography="heading">Let&apos;s Connect</Text>
+        <Text as="h1" typography="subheading">Let&apos;s Connect</Text>
       </Reveal>
 
       <Paragraf className="mt-3">

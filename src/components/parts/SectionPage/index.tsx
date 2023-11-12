@@ -9,7 +9,7 @@ const SectionPage: React.FC<SectionPageProps> = ({
 }) => {
   const finalClassName = twMerge(
     'mt-8',
-    props?.withMarginBottom ? 'mb-8' : undefined,
+    props?.withMarginBottom ? 'mb-20' : undefined,
     className
   );
 

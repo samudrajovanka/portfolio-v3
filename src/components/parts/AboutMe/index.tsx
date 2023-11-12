@@ -15,7 +15,7 @@ const AboutMe = async () => {
   return (
     <article>
       <Reveal>
-        <Text as="h1" typography="heading">About Me</Text>
+        <Text as="h1" typography="subheading">About Me</Text>
       </Reveal>
 
       <Paragraf className="mt-3">

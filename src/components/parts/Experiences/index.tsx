@@ -11,7 +11,7 @@ const Experiences = async () => {
   return (
     <article>
       <Reveal>
-        <Text as="h1" typography="heading">Experiences</Text>
+        <Text as="h1" typography="subheading">Experiences</Text>
       </Reveal>
 
       <List className="mt-3 gap-0">

@@ -55,16 +55,17 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   return (
     <div className={twMerge('relative', isLast ? undefined : 'pb-5')}>
       <div className="absolute bottom-0 left-0 top-1">
-        <div className="aspect-square w-8 rounded-full border-8 border-primary-main"/>
+        <div className="aspect-square w-8 rounded-full border-8 border-primary-main dark:border-secondary-main"/>
 
         {!isLast ? (
           <motion.div
-            className="absolute left-1/2 h-[calc(100%-20px)] w-3 -translate-x-1/2 -translate-y-1 bg-primary-main"
+            className="absolute left-1/2 w-3 -translate-x-1/2 -translate-y-1
+              bg-primary-main dark:bg-secondary-main"
             variants={indicatorVariants}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 0.8, ease: 'easeInOut', delay: 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            viewport={{ once: true, margin: '-5px' }}
           />
         ) : null}
       </div>
