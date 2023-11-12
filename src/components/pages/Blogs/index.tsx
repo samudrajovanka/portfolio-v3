@@ -1,9 +1,14 @@
-import Fade from '@/components/elements/Fade';
-import List from '@/components/elements/List';
-import BlogCard from '@/components/parts/BlogCard';
+import dynamic from 'next/dynamic';
+
 import HeaderSection from '@/components/parts/HeaderSection';
 import SectionPage from '@/components/parts/SectionPage';
 import { getMediumBlogs } from '@/repositories/mediumBlog';
+
+const Fade = dynamic(() => import('@/components/elements/Fade'));
+const List = dynamic(() => import('@/components/elements/List'));
+const Text = dynamic(() => import('@/components/elements/Text'));
+const BlogCard = dynamic(() => import('@/components/parts/BlogCard'));
+const Reveal = dynamic(() => import('@/components/elements/Reveal'));
 
 const Blogs = async () => {
   const mediumBlogResponse = await getMediumBlogs();
@@ -23,13 +28,21 @@ const Blogs = async () => {
       header={header}
       withMarginBottom
     >
-      <List as="ul">
-        {blogs.map((blog) => (
-          <Fade key={blog.guid} role="listitem">
-            <BlogCard blog={blog} />
-          </Fade>
-        ))}
-      </List>
+      {blogs.length ? (
+        <List as="ul">
+          {blogs.map((blog) => (
+            <Fade key={blog.guid} role="listitem">
+              <BlogCard blog={blog} />
+            </Fade>
+          ))}
+        </List>
+      ) : (
+        <Reveal>
+          <Text>
+            There are no blogs yet. Please come back later :)
+          </Text>
+        </Reveal>
+      )}
     </SectionPage>
   );
 };

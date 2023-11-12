@@ -21,7 +21,7 @@ const AboutMe = async () => {
       <Paragraf className="mt-3">
         <Reveal>
           <Text>
-            Hello, my name is Jovanka Samudra, you can call me Jovan. I am an fresh graduate student of Informatics at the UPN Veteran Jakarta University. When I was in college, I joined communities and organizations to expand my skills and knowledge. I&apos;m member and also a former vice-chairperson in the <Link href="https://www.instagram.com/androidupnvj/" isExternal>KSM Android</Link>, and I once served as the department head in <Link href="https://www.instagram.com/bemfikupnvj/" isExternal>BEMF-IK UPNVJ</Link>. Now I work as a Fullstack Web Developer at <Link href="https://www.feedloop.ai/" isExternal>Feedloop</Link>.
+            Hello, my name is Jovanka Samudra, you can call me Jovan. I am an fresh graduate student of Informatics at the UPN Veteran Jakarta University. When I was in college, I joined communities and organizations to expand my skills and knowledge. I&apos;m member and also a former vice-chairperson in the <Link href="https://www.instagram.com/androidupnvj/" isExternal>KSM Android</Link>, and I once served as the department head in <Link href="https://www.instagram.com/bemfikupnvj/" isExternal>BEMF-IK UPNVJ</Link>. Now I work as a Fullstack Engineer at <Link href="https://www.feedloop.ai/" isExternal>Feedloop</Link>.
           </Text>
         </Reveal>
 

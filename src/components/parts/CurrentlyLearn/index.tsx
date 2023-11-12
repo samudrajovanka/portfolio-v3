@@ -7,6 +7,8 @@ const CurrentlyLearn = async () => {
   const learnsResponse = await getLearns();
   const { learns } = learnsResponse.data;
 
+  if (!learns.length) return null;
+
   return (
     <article>
       <Reveal>

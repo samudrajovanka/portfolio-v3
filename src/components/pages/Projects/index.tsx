@@ -1,9 +1,14 @@
-import Fade from '@/components/elements/Fade';
-import List from '@/components/elements/List';
+import dynamic from 'next/dynamic';
+
 import HeaderSection from '@/components/parts/HeaderSection';
-import ProjectCard from '@/components/parts/ProjectCard';
 import SectionPage from '@/components/parts/SectionPage';
 import { getProjects } from '@/repositories/projects';
+
+const Fade = dynamic(() => import('@/components/elements/Fade'));
+const List = dynamic(() => import('@/components/elements/List'));
+const Text = dynamic(() => import('@/components/elements/Text'));
+const ProjectCard = dynamic(() => import('@/components/parts/ProjectCard'));
+const Reveal = dynamic(() => import('@/components/elements/Reveal'));
 
 const Projects = async () => {
   const projectsResponse = await getProjects();
@@ -19,13 +24,21 @@ const Projects = async () => {
       header={header}
       withMarginBottom
     >
-      <List as="ul" display="grid" className="grid-cols-1 sm:grid-cols-2">
-        {projects.map((project) => (
-          <Fade key={project._id} role="listitem">
-            <ProjectCard project={project} />
-          </Fade>
-        ))}
-      </List>
+      {projects.length ? (
+        <List as="ul" display="grid" className="grid-cols-1 sm:grid-cols-2">
+          {projects.map((project) => (
+            <Fade key={project._id} role="listitem">
+              <ProjectCard project={project} />
+            </Fade>
+          ))}
+        </List>
+      ) : (
+        <Reveal>
+          <Text>
+            There are no projects yet. Please come back later :)
+          </Text>
+        </Reveal>
+      )}
     </SectionPage>
   );
 };

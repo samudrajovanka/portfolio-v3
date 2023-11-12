@@ -33,7 +33,7 @@ const LetsConnect = async () => {
         </Reveal>
 
         <Reveal>
-          <Text>You can also read my resume <Link href="/resume">here</Link>. Anyway, I appreciate your time and visit to my profile.</Text>
+          <Text>You can also read my resume <Link href="/resume" isExternal>here</Link>. Anyway, I appreciate your time and visit to my profile.</Text>
         </Reveal>
       </Paragraf>
     </article>
