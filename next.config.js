@@ -13,7 +13,12 @@ const nextConfig = {
     APP_URL: getHost()
   },
   images: {
-    domains: ['media.discordapp.net']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.discordapp.net'
+      }
+    ]
   }
 };
 

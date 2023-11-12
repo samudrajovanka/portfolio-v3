@@ -24,6 +24,7 @@ const Fade: React.FC<FadeProps> = ({ children, className, ...props }) => {
       whileInView="to"
       transition={{ duration: 0.8, ease: 'easeInOut' }}
       viewport={{ once: props.repeat ? false : true }}
+      {...props}
     >
       {children}
     </motion.div>

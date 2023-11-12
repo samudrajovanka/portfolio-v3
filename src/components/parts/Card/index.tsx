@@ -4,7 +4,6 @@ import type { CardProps } from './types';
 
 const Card: React.FC<CardProps> = ({
   children,
-  as: Component = 'div',
   className,
   ...props
 }) => {
@@ -13,7 +12,7 @@ const Card: React.FC<CardProps> = ({
   const transitionClassName = 'transition-transform duration-500';
 
   return (
-    <Component className="group/card relative">
+    <div className="group/card relative h-full">
       <div className={twMerge(
         bgClassName,
         borderClassName,
@@ -33,7 +32,7 @@ const Card: React.FC<CardProps> = ({
       )}>
         {children}
       </div>
-    </Component>
+    </div>
   );
 };
 

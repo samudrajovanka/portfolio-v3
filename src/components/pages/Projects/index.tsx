@@ -21,7 +21,7 @@ const Projects = async () => {
     >
       <List as="ul" display="grid" className="grid-cols-1 sm:grid-cols-2">
         {projects.map((project) => (
-          <Fade key={project._id}>
+          <Fade key={project._id} role="listitem">
             <ProjectCard project={project} />
           </Fade>
         ))}

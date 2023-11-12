@@ -10,7 +10,8 @@ const Text: React.FC<TextProps> = ({
   color = 'normal',
   className,
   resetTypography,
-  resetColor
+  resetColor,
+  ...props
 }) => {
   const getTypographyClassName = (): string => {
     if (resetTypography) return '';
@@ -36,7 +37,7 @@ const Text: React.FC<TextProps> = ({
     className
   );
 
-  return <Component className={fincalClassName}>{children}</Component>;
+  return <Component className={fincalClassName} {...props}>{children}</Component>;
 };
 
 export default Text;

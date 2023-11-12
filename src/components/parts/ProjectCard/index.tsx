@@ -12,7 +12,7 @@ import type { ProjectCardProps } from './types';
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card as="li" className="flex flex-col gap-2">
+    <Card className="flex flex-col gap-2">
       <Image
         src={project.imageUrl}
         alt={project.name}
@@ -35,13 +35,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <Reveal className="mt-4">
           <List as="ul" direction="horizontal" className="flex-wrap gap-2">
             {project.stacks.map((stack) => (
-              <Tag key={stack}>{stack}</Tag>
+              <li key={stack}>
+                <Tag>{stack}</Tag>
+              </li>
             ))}
           </List>
         </Reveal>
 
         {project?.projectUrl || project?.repositoryUrl ? (
-          <div className="mt-2 flex justify-end gap-5">
+          <div className="mt-3 flex justify-end gap-5">
             {project?.projectUrl ? (
               <Reveal>
                 <Link href={project.projectUrl} typography="regular" withColorNeutral isExternal>
