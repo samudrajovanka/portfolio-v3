@@ -16,8 +16,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <Image
         src={project.imageUrl}
         alt={project.name}
-        width={160}
-        height={90}
+        width={640}
+        height={360}
         className="aspect-video w-full object-cover"
       />
       
