@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    @apply font-consolas;
+  }
+
+  html {
+    @apply bg-theme-light;
+  }
+
+  html.dark {
+    @apply bg-theme-dark;
+  }
+
+  html.dark ::marker {
+    @apply text-theme-light;
+  }
+}
+
+@layer utilities {
+  .border-content {
+    @apply border-dashed border-slate-200 dark:border-gray-800;
+  }
+
+  .bg-subtitle {
+    @apply bg-slate-200 dark:bg-gray-800;
+  }
+
+  .text-subtitle {
+    @apply text-slate-500 dark:text-gray-400;
+  }
+
+  .bg-theme {
+    @apply bg-theme-light dark:bg-theme-dark;
+  }
+
+  .text-theme {
+    @apply text-theme-dark dark:text-theme-light;
+  }
+
+  .min-h-d-screen {
+    min-height: 100dvh;
+  }
+
+  .h-d-screen {
+    height: 100dvh;
+  }
+
+  .list-margin {
+    margin-left: 1.5rem;
+  }
+}
+
+#nprogress .bar {
+    @apply bg-primary-main dark:bg-secondary-main;
+  }
