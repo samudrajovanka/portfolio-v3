@@ -1,11 +1,11 @@
 import { FaCode, FaLink } from 'react-icons/fa';
 
 import Card from '@/components/elements/Card';
+import Image from '@/components/elements/Image';
 import Link from '@/components/elements/Link';
 import List from '@/components/elements/List';
 import Reveal from '@/components/elements/Reveal';
 import Text from '@/components/elements/Text';
-import Image from '@/components/elements/Image';
 import Tag from '@/components/parts/Tag';
 
 import type { ProjectCardProps } from './types';
