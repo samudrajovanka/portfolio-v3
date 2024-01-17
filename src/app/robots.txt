@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /resume
 
-Sitemap: https://jovan.id/sitemap.xml
+Sitemap: https://www.jovan.id/sitemap.xml
