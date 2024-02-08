@@ -1,3 +1,5 @@
+'use client';
+
 import Container from '@/components/elements/Container';
 import Logo from '@/components/elements/Logo';
 import Reveal from '@/components/elements/Reveal';

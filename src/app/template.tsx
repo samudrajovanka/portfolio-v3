@@ -1,23 +1,14 @@
-'use client';
+import { Suspense } from 'react';
 
-import { useEffect } from 'react';
-
-import { usePathname, useSearchParams } from 'next/navigation';
-import NProgress from 'nprogress';
-
-NProgress.configure({
-  showSpinner: false
-});
+import NProgressClient from '@/components/parts/NProgressClient';
 
 const Template: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const pathname = usePathname();
-	const searchParams = useSearchParams();
-
-	useEffect(() => {
-    NProgress.done();
-  }, [pathname, searchParams]);
-
-  return children;
+  return (
+    <Suspense>
+      <NProgressClient />
+      {children}
+    </Suspense>
+  );
 };
 
 export default Template;

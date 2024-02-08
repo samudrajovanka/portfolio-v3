@@ -18,7 +18,7 @@ export const SOCIAL_MEDIA_ICONS: SocialMediaIcon[] = [
   {
     key: 'GITHUB',
     icon: AiFillGithub,
-    colorClassName: 'group-hover/icon:text-black'
+    colorClassName: 'group-hover/icon:text-black dark:group-hover/icon:text-white'
   },
   {
     key: 'EMAIL',

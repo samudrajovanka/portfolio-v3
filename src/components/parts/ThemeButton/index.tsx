@@ -27,7 +27,7 @@ const ThemeButton: React.FC<ThemeButtonProps> = ({ className }) => {
     <button
       type="button"
       className={twMerge(
-        'p-5 relative grid place-content-center relative overflow-hidden group/theme',
+        'p-5 relative grid place-content-center overflow-hidden group/theme',
         'border-b border-b-transparent hover:md:border-b-gray-300 dark:hover:md:border-b-white',
         'transition-color duration-500',
         className
